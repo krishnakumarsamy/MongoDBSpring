@@ -82,6 +82,14 @@ public class StudentController {
 
 	}
 
+	/**
+	 * Add / Edit / Delete Studetn based on Id.
+	 * 
+	 * @param operation
+	 * @param studentId
+	 * @return
+	 * @throws MongoDBSpringException
+	 */
 	private Student getStudentById(Operations operation, final String studentId)
 			throws MongoDBSpringException {
 		final Student student = studentService.getStudent(studentId);
