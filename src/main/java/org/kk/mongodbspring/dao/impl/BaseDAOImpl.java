@@ -41,34 +41,20 @@ public class BaseDAOImpl implements BaseDAO {
 		return connection.getDatabase().getCollection(collectionName);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.mongodbspring.dao.BaseDAO#getDocuments(java.lang.String,
-	 * com.mongodb.DBObject)
-	 */
+	@Override
 	public List<DBObject> getDocuments(final String collectionName, final DBObject query)
 			throws MongoDBSpringException {
 		logger.info("Inside getDocuments");
 		return getListOfDocuments(getDocument(collectionName).find(query));
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.mongodbspring.dao.BaseDAO#getDocuments(java.lang.String)
-	 */
+	@Override
 	public List<DBObject> getDocuments(final String collectionName) throws MongoDBSpringException {
 		logger.info("Inside getDocuments");
 		return getListOfDocuments(getDocument(collectionName).find());
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.mongodbspring.dao.BaseDAO#createDocument(java.lang.String,
-	 * com.mongodb.DBObject)
-	 */
+	@Override
 	public WriteResult createDocument(final String collectionName, final DBObject object)
 			throws MongoDBSpringException {
 		logger.info("Inside createDocument start");
@@ -84,12 +70,7 @@ public class BaseDAOImpl implements BaseDAO {
 		return result;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.mongodbspring.dao.BaseDAO#editDocument(java.lang.String,
-	 * com.mongodb.DBObject, com.mongodb.DBObject)
-	 */
+	@Override
 	public WriteResult editDocument(String collectionName, DBObject query, DBObject object)
 			throws MongoDBSpringException {
 		logger.info("Inside editDocument start");
@@ -105,12 +86,7 @@ public class BaseDAOImpl implements BaseDAO {
 		return result;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.mongodbspring.dao.BaseDAO#deleteDocument(java.lang.String,
-	 * com.mongodb.DBObject)
-	 */
+	@Override
 	public WriteResult deleteDocument(String collectionName, DBObject query)
 			throws MongoDBSpringException {
 		logger.info("Inside deleteDocument start");
@@ -127,10 +103,10 @@ public class BaseDAOImpl implements BaseDAO {
 	}
 
 	/**
-	 * Used to iterate DBCursor and retrive each document.
+	 * Used to iterate DBCursor and retrieve each document.
 	 * 
 	 * @param cursor
-	 *            - It contains all the documments(DBObjects).
+	 *            - It contains all the documents(DBObjects).
 	 * @return List<DBObject>
 	 * @throws MongoDBSpringException
 	 */

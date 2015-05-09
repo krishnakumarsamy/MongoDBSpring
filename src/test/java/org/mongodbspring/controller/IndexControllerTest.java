@@ -22,11 +22,15 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+/**
+ * @author krishnakumar
+ * 
+ */
 @ContextConfiguration("file:src/main/webapp/WEB-INF/MongoDBSpring-servlet.xml")
 public class IndexControllerTest extends AbstractTestNGSpringContextTests {
 
 	@InjectMocks
-	private transient IndexController controller;
+	private transient IndexController indexController;
 
 	@Mock
 	private transient StudentService studentService;
@@ -39,7 +43,7 @@ public class IndexControllerTest extends AbstractTestNGSpringContextTests {
 	@BeforeClass
 	public void setUp() {
 		MockitoAnnotations.initMocks(this);
-		mockMvc = MockMvcBuilders.standaloneSetup(controller).build();
+		mockMvc = MockMvcBuilders.standaloneSetup(indexController).build();
 	}
 
 	@Test

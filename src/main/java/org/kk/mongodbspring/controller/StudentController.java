@@ -28,7 +28,7 @@ public class StudentController {
 	private transient StudentService studentService;
 
 	/**
-	 * Hanadles add person operation.
+	 * Handle add person operation.
 	 * 
 	 * @param student
 	 * @param result
@@ -83,7 +83,7 @@ public class StudentController {
 	}
 
 	/**
-	 * Add / Edit / Delete Studetn based on Id.
+	 * Add / Edit / Delete Student based on Id.
 	 * 
 	 * @param operation
 	 * @param studentId

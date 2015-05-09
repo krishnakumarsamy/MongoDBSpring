@@ -17,7 +17,7 @@ Includes following.
 3) Basic CRUD operations using springMVC + MongoDB
 
 Unit Testing:
-JUnit + Mockito
+TestNG + Mockito
 
 Installation of MongoDB steps can be found in the below link
 http://krishnakumarmurugasamy.blogspot.in/2015/01/mongodb-in-installation-backup-and.html

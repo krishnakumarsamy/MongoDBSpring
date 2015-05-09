@@ -71,7 +71,7 @@ public class StudentService {
 	}
 
 	/**
-	 * Service method for edit student detials.
+	 * Service method for edit student details.
 	 * 
 	 * @param student
 	 * @return
@@ -84,7 +84,7 @@ public class StudentService {
 	}
 
 	/**
-	 * Service method for delete student detials.
+	 * Service method for delete student details.
 	 * 
 	 * @param student
 	 * @return

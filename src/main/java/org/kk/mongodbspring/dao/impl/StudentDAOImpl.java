@@ -9,7 +9,6 @@ import org.kk.mongodbspring.dao.BaseDAO;
 import org.kk.mongodbspring.dao.StudentDAO;
 import org.kk.mongodbspring.exception.MongoDBSpringException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import com.mongodb.BasicDBObjectBuilder;
@@ -28,37 +27,23 @@ public class StudentDAOImpl implements StudentDAO {
 	private static Logger logger = Logger.getLogger(StudentDAOImpl.class);
 
 	@Autowired
-	@Qualifier(value = "baseDAOImpl")
 	private transient BaseDAO baseDao;
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.mongodbspring.dao.StudentDAO#addStudent(com.mongodb.DBObject)
-	 */
-
+	@Override
 	public WriteResult addStudent(final DBObject object) throws MongoDBSpringException {
 		final WriteResult result = baseDao.createDocument(Constants.COLL_STUDENT, object);
 		logger.info("Saved Successfully.... - " + object.toString());
 		return result;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.mongodbspring.dao.StudentDAO#getAllStudent()
-	 */
+	@Override
 	public List<DBObject> getAllStudent() throws MongoDBSpringException {
 		final List<DBObject> studentList = baseDao.getDocuments(Constants.COLL_STUDENT);
 		logger.info("getAllStudent:Number of Student Documents seleted - " + studentList.size());
 		return studentList;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.mongodbspring.dao.StudentDAO#getStudent(java.lang.String)
-	 */
+	@Override
 	public DBObject getStudent(final String studentId) throws MongoDBSpringException {
 		final BasicDBObjectBuilder query = new BasicDBObjectBuilder();
 		query.add(Constants.TXT_OBJECTID, new ObjectId(studentId));
@@ -68,12 +53,7 @@ public class StudentDAOImpl implements StudentDAO {
 		return studentList.get(0);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.mongodbspring.dao.StudentDAO#editStudent(com.mongodb.DBObject,
-	 * com.mongodb.DBObject)
-	 */
+	@Override
 	public WriteResult editStudent(final DBObject query, final DBObject student)
 			throws MongoDBSpringException {
 		logger.info("Edit Student Completed successfully");
@@ -81,11 +61,7 @@ public class StudentDAOImpl implements StudentDAO {
 				getStudent(String.valueOf(student.get("_id"))), student);
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.mongodbspring.dao.StudentDAO#deleteStudent(com.mongodb.DBObject)
-	 */
+	@Override
 	public WriteResult deleteStudent(final DBObject query) throws MongoDBSpringException {
 		logger.info("Delete Student Completed successfully");
 		return baseDao.deleteDocument(Constants.COLL_STUDENT, query);
