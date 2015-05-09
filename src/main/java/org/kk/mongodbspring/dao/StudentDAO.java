@@ -2,7 +2,7 @@ package org.kk.mongodbspring.dao;
 
 import java.util.List;
 
-import org.kk.mongodbspring.common.MongoDBSpringException;
+import org.kk.mongodbspring.exception.MongoDBSpringException;
 
 import com.mongodb.DBObject;
 import com.mongodb.WriteResult;

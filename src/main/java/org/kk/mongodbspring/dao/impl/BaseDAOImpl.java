@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.kk.mongodbspring.common.MongoDBSpringException;
 import org.kk.mongodbspring.common.connection.DBConnection;
 import org.kk.mongodbspring.dao.BaseDAO;
+import org.kk.mongodbspring.exception.MongoDBSpringException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

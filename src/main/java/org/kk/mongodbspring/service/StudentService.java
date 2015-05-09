@@ -3,14 +3,13 @@ package org.kk.mongodbspring.service;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.kk.mongodbspring.common.MongoDBSpringException;
 import org.kk.mongodbspring.common.Operations;
 import org.kk.mongodbspring.converter.StudentConverter;
 import org.kk.mongodbspring.dao.StudentDAO;
+import org.kk.mongodbspring.exception.MongoDBSpringException;
 import org.kk.mongodbspring.model.Student;
 import org.kk.mongodbspring.service.helper.StudentServiceHelper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -25,7 +24,6 @@ public class StudentService {
 	private final Logger logger = Logger.getLogger(StudentService.class);
 
 	@Autowired
-	@Qualifier("studentDAOImpl")
 	private transient StudentDAO studentDao;
 
 	/**
