@@ -5,7 +5,7 @@ This is a simple SpringMVC project with back-end as MongoDB.
 
 Includes following.
 
-1. Exception Handling
+1) Exception Handling
 	a) Handle Exception using controller advice
 	b) Create custom exception
 
