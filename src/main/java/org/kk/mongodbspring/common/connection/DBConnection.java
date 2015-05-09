@@ -8,7 +8,7 @@ import javax.annotation.PostConstruct;
 
 import org.apache.log4j.Logger;
 import org.kk.mongodbspring.common.Constants;
-import org.kk.mongodbspring.common.MongoDBSpringException;
+import org.kk.mongodbspring.exception.MongoDBSpringException;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Repository;
 

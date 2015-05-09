@@ -1,4 +1,4 @@
-package org.kk.mongodbspring.common;
+package org.kk.mongodbspring.exception;
 
 /**
  * Custom Exception class.

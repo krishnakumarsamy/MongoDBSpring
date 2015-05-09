@@ -4,9 +4,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
 import org.kk.mongodbspring.common.Constants;
-import org.kk.mongodbspring.common.MongoDBSpringException;
 import org.kk.mongodbspring.common.Operations;
 import org.kk.mongodbspring.common.URI;
+import org.kk.mongodbspring.exception.MongoDBSpringException;
 import org.kk.mongodbspring.model.Student;
 import org.kk.mongodbspring.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +28,7 @@ public class StudentController {
 	private transient StudentService studentService;
 
 	/**
-	 * Hanadles add person operation.
+	 * Handle add person operation.
 	 * 
 	 * @param student
 	 * @param result
@@ -83,7 +83,7 @@ public class StudentController {
 	}
 
 	/**
-	 * Add / Edit / Delete Studetn based on Id.
+	 * Add / Edit / Delete Student based on Id.
 	 * 
 	 * @param operation
 	 * @param studentId

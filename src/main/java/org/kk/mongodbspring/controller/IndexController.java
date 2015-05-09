@@ -4,7 +4,7 @@ import static org.kk.mongodbspring.common.Constants.TXT_COMMAND;
 
 import org.apache.log4j.Logger;
 import org.kk.mongodbspring.common.Constants;
-import org.kk.mongodbspring.common.MongoDBSpringException;
+import org.kk.mongodbspring.exception.MongoDBSpringException;
 import org.kk.mongodbspring.model.Student;
 import org.kk.mongodbspring.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;

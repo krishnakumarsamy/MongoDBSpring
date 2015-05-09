@@ -1,4 +1,4 @@
-package org.kk.mongodbspring.common;
+package org.kk.mongodbspring.exception;
 
 import java.io.IOException;
 
@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
+import org.kk.mongodbspring.common.Constants;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;

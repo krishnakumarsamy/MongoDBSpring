@@ -3,10 +3,10 @@ package org.kk.mongodbspring.service;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.kk.mongodbspring.common.MongoDBSpringException;
 import org.kk.mongodbspring.common.Operations;
 import org.kk.mongodbspring.converter.StudentConverter;
 import org.kk.mongodbspring.dao.StudentDAO;
+import org.kk.mongodbspring.exception.MongoDBSpringException;
 import org.kk.mongodbspring.model.Student;
 import org.kk.mongodbspring.service.helper.StudentServiceHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,7 +71,7 @@ public class StudentService {
 	}
 
 	/**
-	 * Service method for edit student detials.
+	 * Service method for edit student details.
 	 * 
 	 * @param student
 	 * @return
@@ -84,7 +84,7 @@ public class StudentService {
 	}
 
 	/**
-	 * Service method for delete student detials.
+	 * Service method for delete student details.
 	 * 
 	 * @param student
 	 * @return
