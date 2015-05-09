@@ -5,7 +5,7 @@ This is a simple SpringMVC project with back-end as MongoDB.
 
 Includes following.
 
-1. Exception Handling
+1) Exception Handling
 	a) Handle Exception using controller advice
 	b) Create custom exception
 
@@ -18,6 +18,10 @@ Includes following.
 
 Unit Testing:
 TestNG + Mockito + Spring Test
+
+TestNG:
+@DataProvider
+
 
 Installation of MongoDB steps can be found in the below link
 http://krishnakumarmurugasamy.blogspot.in/2015/01/mongodb-in-installation-backup-and.html
